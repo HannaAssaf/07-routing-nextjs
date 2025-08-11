@@ -6,7 +6,7 @@ axios.defaults.headers.common["Authorization"] = `Bearer ${
   process.env.NEXT_PUBLIC_NOTEHUB_TOKEN
 }`;
 
-interface FetchNotesProps {
+export interface FetchNotesProps {
   notes: Note[];
   totalPages: number;
 }
@@ -16,15 +16,26 @@ export interface NewNoteData {
   content: string;
   tag: NoteTag;
 }
+
+export interface TagType {
+  id: string;
+  name: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export const fetchNotes = async (
   search: string = "",
   page: number = 1,
+  tag?: string,
   perPage: number = 12
 ) => {
   const config = {
     params: {
-      search,
+      // search,
       page,
+      tag,
       perPage,
     },
   };

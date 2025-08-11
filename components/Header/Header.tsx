@@ -1,7 +1,8 @@
+import TagsMenu from "../TagsMenu/TagsMenu";
 import css from "./Header.module.css";
 import Link from "next/link";
 
-export default function Header() {
+export default async function Header() {
   return (
     <header className={css.header}>
       <Link href="/" aria-label="Home">
@@ -15,9 +16,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/notes" aria-label="Notes">
-              Notes
-            </Link>
+            <TagsMenu />
           </li>
         </ul>
       </nav>
