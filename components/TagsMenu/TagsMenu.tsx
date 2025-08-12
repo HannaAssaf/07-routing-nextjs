@@ -5,7 +5,6 @@ import css from "./TagsMenu.module.css";
 import Link from "next/link";
 
 const tagCategories: string[] = [
-  "All",
   "Todo",
   "Work",
   "Personal",
@@ -24,6 +23,15 @@ const TagsMenu = () => {
       </button>
       {isOpen && (
         <ul className={css.menuList}>
+          <li className={css.menuItem}>
+            <Link
+              href="/notes/filter/All"
+              className={css.menuLink}
+              onClick={toggle}
+            >
+              All
+            </Link>
+          </li>
           {tagCategories.map((tag) => (
             <li key={tag} className={css.menuItem}>
               <Link

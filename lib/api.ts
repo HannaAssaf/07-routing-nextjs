@@ -33,7 +33,7 @@ export const fetchNotes = async (
 ) => {
   const config = {
     params: {
-      // search,
+      search,
       page,
       tag,
       perPage,
