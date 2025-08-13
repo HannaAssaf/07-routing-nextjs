@@ -1,4 +1,4 @@
-`use client`;
+"use client";
 
 import { createPortal } from "react-dom";
 import css from "./Modal.module.css";
