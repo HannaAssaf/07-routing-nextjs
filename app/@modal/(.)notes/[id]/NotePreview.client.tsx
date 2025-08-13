@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Modal from "@/components/Modal/Modal";
 
-export default async function NotePreviewClient() {
+export default function NotePreviewClient() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
 
